@@ -24,7 +24,9 @@
                 <button class="button-add" onclick="agregarAmigo()">Añadir</button>
             </div>
            
-            <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
+            <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list">
+
+            </ul>
             <ul id="resultado" class="result-list" aria-live="polite"></ul>
 
             <div class="button-container">
@@ -37,5 +39,12 @@
     </main>
 
     <script src="app.js" defer></script>
+    <script>
+        document.getElementById("amigo").addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                agregarAmigo();
+            }
+        });
+    </script>
 </body>
 </html>
