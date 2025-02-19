@@ -1,5 +1,6 @@
 let amigos = [];
 let listaAmigos = document.getElementById("listaAmigos");
+let Amigo = document.getElementById("resultado");
 
 function agregarAmigo(){
     var texto = document.getElementById("amigo").value;
@@ -17,4 +18,9 @@ function agregarAmigo(){
     for (let i = 0; i < amigos.length; i++) {
         listaAmigos.innerHTML += "<li>" + amigos[i] + "</li>";
     }
+ }
+
+ function sortearAmigo(){
+    let amigoSeleccionado = amigos[Math.floor(Math.random() * amigos.length)];
+    Amigo.innerHTML = amigoSeleccionado;
  }
